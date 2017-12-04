@@ -23,7 +23,10 @@ function opbm_module_add_grid_shortcodes( $shortcodes ) {
  
 add_shortcode( 'op-bm-vcfunc', 'op_bm_vcfunc_render' );
 function op_bm_vcfunc_render() {
-   return '<h2>Hello, World!</h2>';
+   
+  if ( get_field( 'author_name') ) { 
+the_field( 'author_name' );
+ } 
 }
 
 ?>
