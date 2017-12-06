@@ -1,4 +1,4 @@
-var biographies = (Array.from(document.querySelectorAll('.mk-employee-item')));
+var biographies = (Array.from(document.querySelectorAll('.page-id-1068 .mk-employee-item')));
 
 var biolength = biographies.length;
 
@@ -18,7 +18,7 @@ for (i = 0; i < biolength; i++){
 };
 
 jQuery(document).ready(function($){
-$('.mk-employee-item').remove();
-$('.mk-employees ul').append(newbios);
-$('body').append(modals);
+$('.page-id-1068 .mk-employee-item').remove();
+$('.page-id-1068 .mk-employees ul').append(newbios);
+$('.page-id-1068').append(modals);
 });
