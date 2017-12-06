@@ -1,4 +1,4 @@
-var biographies = (Array.from(document.querySelectorAll('.level2')));
+var biographies = (Array.from(document.querySelectorAll('.mk-employee-item')));
 
 var biolength = biographies.length;
 
@@ -9,7 +9,7 @@ var modals = [];
 var count = 0;
 for (i = 0; i < biolength; i++){
 	count = count + 1;
-	newbios += '<div>' + biographies[i].innerHTML.substring(0, 600) + '<p> . . . <a href="#op-bm' + count + '" rel="modal:open">Read full bio </a></p></div>'
+	newbios += '<li class="mk-employee-item a_colitem a_align-center a_display-inline-block a_float-left m_7">' + biographies[i].innerHTML.substring(0, 600) + '<p> . . . <a href="#op-bm' + count + '" rel="modal:open">Read full bio </a></p></div><div class="clearboth"></div></div></div></li>'
 };
 var count2 = 0;
 for (i = 0; i < biolength; i++){
@@ -18,7 +18,7 @@ for (i = 0; i < biolength; i++){
 };
 
 jQuery(document).ready(function($){
-$('.level2').remove();
-$('.level1').append(newbios);
-$('.level1').append(modals);
+$('.mk-employee-item').remove();
+$('.mk-employees ul').append(newbios);
+$('body').append(modals);
 });
