@@ -1,18 +1,18 @@
 <?php
 /*
-Plugin Name: OP-BM Add to Post
+Plugin Name: OP-BM Dom Scrubber
 Plugin URI: 
 Description: Xpath dom search scrubs empty divs for a given page ID
-Version: 0.2
+Version: 1.0
 Author: Bean Media
 Author URI: http://www.beanmediaproductions.com
 */
-add_filter( 'the_content', 'content_mod_post' );
+add_filter( 'the_content', 'content_dom_scrubber' );
 
-function content_mod_post($content) {
+function content_dom_scrubber($content) {
 	global $post;
 	
-if(is_page(5)){
+if(is_page(605)){
 
 $doc = $content;
 $dom = new DOMDocument();
