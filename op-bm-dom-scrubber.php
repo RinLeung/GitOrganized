@@ -17,7 +17,13 @@ if(is_page(605)){
 $doc = $content;
 $dom = new DOMDocument();
 @$dom->loadHTML($doc);
+/* or add possibly...
+	
+$finder = new DomXPath($dom);
+$classname="my-class";
+$nodes = $finder->query("//*[contains(@class, '$classname')]");
 
+*/
 foreach ($dom->getElementsByTagName('div') as $node) {
 	
 	if ($node->textContent == ''){
