@@ -2,6 +2,7 @@ jQuery('.menu-homepage-scroll-container a').addClass('js-smooth-scroll2').attr('
 jQuery('.section:after').trigger('inview').addClass('animateme');
 jQuery('.burger-i>a').addClass('no-click').removeAttr('href');
 jQuery('.static>a').addClass('no-click').removeAttr('href');
+//Custom toggle for the mega menu 
 jQuery(document).ready(function( $ ) {
 	var i = 0; 
 	$('.burger-i>a').click(function(){
@@ -19,9 +20,14 @@ jQuery(document).ready(function( $ ) {
 		}
 	});
 });
+//Move byline to just below Header
 jQuery('.opbm-byline').detach().prependTo('.blog-single-meta');
 
+//Swap icon for responsive nav menu plugin
+jQuery('.responsive-menu-inner').remove();
+jQuery('.responsive-menu-box').append('<div class="newiconcontainer"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo5OUVEM0E3OUVCRjcxMUU3OUEyMDk0QzgyQzVFMEMzNyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo5OUVEM0E3QUVCRjcxMUU3OUEyMDk0QzgyQzVFMEMzNyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjk5RUQzQTc3RUJGNzExRTc5QTIwOTRDODJDNUUwQzM3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjk5RUQzQTc4RUJGNzExRTc5QTIwOTRDODJDNUUwQzM3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+CE6PWQAAABpJREFUeNpi/P//PwMxgImBSDCqkDoKAQIMANUSAxFqvpFcAAAAAElFTkSuQmCC" alt=""/></div>');
 
+//Start scroll functions
 jQuery(document).ready(function( $ ) {
 // add bouncy arrow
 	$('body').append('<div class="arrow jump animatedscroll iteration"></div>');
@@ -35,7 +41,6 @@ var controller = new ScrollMagic.Controller({globalSceneOptions: {duration: hgt 
 // create a scene
 new ScrollMagic.Scene({triggerElement: "#theme-page"})
 .setClassToggle(".mk-header-holder","transparent")
-.addIndicators()
 .addTo(controller);
 
 // create a scene
@@ -43,10 +48,12 @@ new ScrollMagic.Scene({triggerElement: "#theme-page"})
 .setClassToggle(".arrow","hidden")
 .addTo(controller);
 
+// create a scene
 new ScrollMagic.Scene({triggerElement: "#theme-page"})
 .setClassToggle(".mk-sticky-logo","hidden")
 .addTo(controller);
 	
+// create a scene
 new ScrollMagic.Scene({triggerElement: "#theme-page"})
 .setClassToggle(".widthzero","widthactual")
 .addTo(controller);	
@@ -56,8 +63,9 @@ new ScrollMagic.Scene({triggerElement: "#theme-page"})
 	new ScrollMagic.Scene({triggerElement: "#theme-page"})
 .setClassToggle(".widthzero","animated")
 .addTo(controller);	
-	
-		new ScrollMagic.Scene({triggerElement: "#theme-page"})
+
+// create a scene
+new ScrollMagic.Scene({triggerElement: "#theme-page"})
 .setClassToggle(".dark-logo","hidden")
 .addTo(controller);	
 })
