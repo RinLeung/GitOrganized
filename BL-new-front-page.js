@@ -8,7 +8,7 @@ jQuery(document).ready(function( $ ) {
 	$('.burger-i>a').click(function(){
 		if (i == 0){ 
 		$('.main-navigation-ul li > .sub-menu').css({"display": "block", "width":"auto" });
-			$('#menu-item-940 > .menu-item-link').html("<svg class='mk-svg-icon' data-name='mk-moon-close' data-cacheid='icon-59f20e6a1c92c' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path d='M507.331 411.33l-.006-.005-155.322-155.325 155.322-155.325.006-.005c1.672-1.673 2.881-3.627 3.656-5.708 2.123-5.688.912-12.341-3.662-16.915l-73.373-73.373c-4.574-4.573-11.225-5.783-16.914-3.66-2.08.775-4.035 1.984-5.709 3.655l-.004.005-155.324 155.326-155.324-155.325-.005-.005c-1.673-1.671-3.627-2.88-5.707-3.655-5.69-2.124-12.341-.913-16.915 3.66l-73.374 73.374c-4.574 4.574-5.784 11.226-3.661 16.914.776 2.08 1.985 4.036 3.656 5.708l.005.005 155.325 155.324-155.325 155.326-.004.005c-1.671 1.673-2.88 3.627-3.657 5.707-2.124 5.688-.913 12.341 3.661 16.915l73.374 73.373c4.575 4.574 11.226 5.784 16.915 3.661 2.08-.776 4.035-1.985 5.708-3.656l.005-.005 155.324-155.325 155.324 155.325.006.004c1.674 1.672 3.627 2.881 5.707 3.657 5.689 2.123 12.342.913 16.914-3.661l73.373-73.374c4.574-4.574 5.785-11.227 3.662-16.915-.776-2.08-1.985-4.034-3.657-5.707z'></path></svg>");
+			$('#menu-item-940 > .menu-item-link').html("<img src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBtZWV0IiB2aWV3Qm94PSIwIDAgMTUwIDE1MCIgd2lkdGg9IjE1MCIgaGVpZ2h0PSIxNTAiPjxkZWZzPjxwYXRoIGQ9Ik0zNi45OCAxMjEuMjZDMzQuMiAxMjMuOTEgMjkuNzkgMTIzLjgyIDI3LjEzIDEyMS4wM0MyNy4xMyAxMjEuMDMgMjcuMTMgMTIxLjAzIDI3LjEzIDEyMS4wM0MyNC40OCAxMTguMjYgMjQuNTkgMTEzLjg1IDI3LjM3IDExMS4yQzM2LjEzIDEwMi44MyAxMDYuMjggMzUuODIgMTE1LjA1IDI3LjQ0QzExNy44MyAyNC43OSAxMjIuMjMgMjQuODkgMTI0Ljg4IDI3LjY3QzEyNC44OCAyNy42NyAxMjQuODggMjcuNjcgMTI0Ljg4IDI3LjY3QzEyNi41OSAzMi40NSAxMjYuNTEgMzUuNzMgMTI0LjY2IDM3LjVDMTE1Ljg5IDQ1Ljg4IDQ1Ljc0IDExMi44OSAzNi45OCAxMjEuMjZaIiBpZD0iZU1uNFhrVzUyIj48L3BhdGg+PHBhdGggZD0iTTI2LjI1IDM3LjMxQzIzLjQ2IDM0LjY3IDIzLjM1IDMwLjI2IDI1Ljk5IDI3LjQ3QzI1Ljk5IDI3LjQ3IDI1Ljk5IDI3LjQ3IDI1Ljk5IDI3LjQ3QzI4LjYzIDI0LjY5IDMzLjA1IDI0LjU3IDM1LjgzIDI3LjIxQzQ0LjYyIDM1LjU2IDExNSAxMDIuMzIgMTIzLjggMTEwLjY3QzEyNi41OSAxMTMuMzEgMTI2LjcgMTE3LjcyIDEyNC4wNiAxMjAuNUMxMjQuMDYgMTIwLjUgMTI0LjA2IDEyMC41IDEyNC4wNiAxMjAuNUMxMTkuMzYgMTIyLjQ0IDExNi4wOCAxMjIuNTMgMTE0LjIyIDEyMC43N0MxMDUuNDIgMTEyLjQyIDM1LjA0IDQ1LjY1IDI2LjI1IDM3LjMxWiIgaWQ9ImYyNjFrU29LTEwiPjwvcGF0aD48L2RlZnM+PGc+PGc+PGc+PHVzZSB4bGluazpocmVmPSIjZU1uNFhrVzUyIiBvcGFjaXR5PSIxIiBmaWxsPSIjMTQxYjRkIiBmaWxsLW9wYWNpdHk9IjEiPjwvdXNlPjxnPjx1c2UgeGxpbms6aHJlZj0iI2VNbjRYa1c1MiIgb3BhY2l0eT0iMSIgZmlsbC1vcGFjaXR5PSIwIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMCIgc3Ryb2tlLW9wYWNpdHk9IjAiPjwvdXNlPjwvZz48L2c+PGc+PHVzZSB4bGluazpocmVmPSIjZjI2MWtTb0tMTCIgb3BhY2l0eT0iMSIgZmlsbD0iIzE0MWI0ZCIgZmlsbC1vcGFjaXR5PSIxIj48L3VzZT48Zz48dXNlIHhsaW5rOmhyZWY9IiNmMjYxa1NvS0xMIiBvcGFjaXR5PSIxIiBmaWxsLW9wYWNpdHk9IjAiIHN0cm9rZT0iIzAwMDAwMCIgc3Ryb2tlLXdpZHRoPSIwIiBzdHJva2Utb3BhY2l0eT0iMCI+PC91c2U+PC9nPjwvZz48L2c+PC9nPjwvc3ZnPg==' style='width:35px;' />");
 			$('body').prepend('<style class="opbm-style">@media (min-width:1141px){.main-navigation-ul li.has-mega-menu>ul.sub-menu{top:20px;}.mk-svg-icon{position:relative; z-index:99;}.header-logo{z-index:-1}.dropdownJavascript li.dropdownOpen>ul.sub-menu {display:block!important}</style>');
 			i++;
 		}
@@ -52,6 +52,9 @@ new ScrollMagic.Scene({triggerElement: "#theme-page"})
 new ScrollMagic.Scene({triggerElement: "#theme-page"})
 .setClassToggle(".mk-sticky-logo","hidden")
 .addTo(controller);
+	new ScrollMagic.Scene({triggerElement: "#theme-page"})
+.setClassToggle(".mk-resposnive-logo","hidden")
+.addTo(controller);
 	
 // create a scene
 new ScrollMagic.Scene({triggerElement: "#theme-page"})
@@ -63,9 +66,26 @@ new ScrollMagic.Scene({triggerElement: "#theme-page"})
 	new ScrollMagic.Scene({triggerElement: "#theme-page"})
 .setClassToggle(".widthzero","animated")
 .addTo(controller);	
-
+	
 // create a scene
 new ScrollMagic.Scene({triggerElement: "#theme-page"})
 .setClassToggle(".dark-logo","hidden")
-.addTo(controller);	
+.addTo(controller);
+	
+$('.swap-dark').attr('id','swap-dark');
+$('.swap-dark2').attr('id','swap-dark2');
+var hgt2 = document.getElementById("swap-dark").scrollHeight;
+var hgt3 = document.getElementById("swap-dark2").scrollHeight;
+var hgtsum = hgt2 + hgt3;
+var controller2 = new ScrollMagic.Controller();
+// create a scene
+new ScrollMagic.Scene({triggerElement: "#swap-dark",triggerHook: 'onLeave', duration: hgtsum})
+.setClassToggle(".newiconcontainer","darkicons")
+.addTo(controller2);	
+new ScrollMagic.Scene({triggerElement: "#swap-dark",triggerHook: 'onLeave', duration: hgtsum})
+.setClassToggle(".responsive-menu-button","darkiconsbg")
+.addTo(controller2);	
+	
+	
 })
+
