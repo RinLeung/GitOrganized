@@ -72,17 +72,25 @@ new ScrollMagic.Scene({triggerElement: "#theme-page"})
 .setClassToggle(".dark-logo","hidden")
 .addTo(controller);
 	
-$('.swap-dark').attr('id','swap-dark');
+$('.swap-dark3').attr('id','swap-dark3');
 $('.swap-dark2').attr('id','swap-dark2');
-var hgt2 = document.getElementById("swap-dark").scrollHeight;
+var hgt2 = document.getElementById("swap-dark3").scrollHeight;
 var hgt3 = document.getElementById("swap-dark2").scrollHeight;
 var hgtsum = hgt2 + hgt3;
 var controller2 = new ScrollMagic.Controller();
+
 // create a scene
-new ScrollMagic.Scene({triggerElement: "#swap-dark",triggerHook: 'onLeave', duration: hgtsum})
+new ScrollMagic.Scene({triggerElement: "#swap-dark3",triggerHook: 'onLeave', duration: hgt2})
 .setClassToggle(".newiconcontainer","darkicons")
 .addTo(controller2);	
-new ScrollMagic.Scene({triggerElement: "#swap-dark",triggerHook: 'onLeave', duration: hgtsum})
+new ScrollMagic.Scene({triggerElement: "#swap-dark3",triggerHook: 'onLeave', duration: hgt2})
+.setClassToggle(".responsive-menu-button","darkiconsbg")
+.addTo(controller2);	
+	
+new ScrollMagic.Scene({triggerElement: "#swap-dark2",triggerHook: 'onLeave', duration: hgt3})
+.setClassToggle(".newiconcontainer","darkicons")
+.addTo(controller2);	
+new ScrollMagic.Scene({triggerElement: "#swap-dark2",triggerHook: 'onLeave', duration: hgt3})
 .setClassToggle(".responsive-menu-button","darkiconsbg")
 .addTo(controller2);	
 	

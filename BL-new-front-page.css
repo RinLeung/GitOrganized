@@ -1,3 +1,16 @@
+@media (min-width:768px){
+	.hide-mdlg{display:none;}
+}
+/* colors */
+.wh {color:white !important;}
+.or {color:#f26522 !important;}
+.gy {color:#707070 !important;}
+/* end colors */
+
+/* font sizes */
+.tfour{font-size:24px !important;}
+/* end font sizes */
+
 .mk-text-block p a:link {text-decoration:underline;}
 .mk-text-block a:link {text-decoration:underline;}
 .nav-links .nav-previous a, .nav-links .nav-next a {background: #00a9e0;
@@ -68,7 +81,9 @@
 /* end menu scroll classes */
 
 /* start render svg logo */
+@media(min-width:1140px){
 .mk-desktop-logo.dark-logo, .mk-desktop-logo.light-logo, .mk-resposnive-logo, .mk-sticky-logo{width: 325px; }
+}
 /* end render svg logo */
 
 /* start icon center */
@@ -120,7 +135,7 @@
 }
 .hidden{display:none !important; width:0;}
 .widthzero{width:0}
-@media (min-width:1025px){
+@media (min-width:1140px){
 .widthactual{width:auto; height:44px !important;background: white; padding: 23px 100px 23px 10px;}
 }
 /* end scroll animation */
@@ -134,14 +149,6 @@
 }
 
 /* end general nav menu mods */
-
-/* start mobile menu style */
-@media (max-width:780px){
-	.widthzero{
-		/*width: 35px !important; */
-	}
-}
-/* end mobile menu style */
 
 /* start responsive navigation menu plugin replacement icon */
 .responsive-menu-inner, .responsive-menu-inner::before, .responsive-menu-inner::after{background-color:rgba(255,255,255,0) !important;}
@@ -183,7 +190,25 @@ button#responsive-menu-button{
 	background:#141b4d !important;
 }
 /* end responsive navigation menu plugin replacement icon */
-
+@media handheld, only screen and (max-width: 767px){
+	.heightfull{height:100vh;}
+	.heightfull.plus{height:calc(100vh + 90px);}
+	
+.home .mk-button-container {
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+.home .border.wh .mk-button{
+	border: 1px solid white;
+	}
+	.home .solo.vc_custom_heading{
+	display:table-cell;
+	vertical-align:middle;
+	height: calc(100vh - 90px);
+	padding: 20px;
+	}
+}
 @media (max-width:1024px){
 .home .mk-resposnive-logo{width:0}	
 .home .mk-header-inner,.home .a-sticky .mk-header-inner, .home .header-style-2.a-sticky .mk-classic-nav-bg{
