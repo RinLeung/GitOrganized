@@ -4,6 +4,7 @@ jQuery('.burger-i>a').addClass('no-click').removeAttr('href');
 jQuery('.static>a').addClass('no-click').removeAttr('href');
 //Custom toggle for the mega menu 
 jQuery(document).ready(function( $ ) {
+	window.scrollTo(0,1);
 	var i = 0; 
 	$('.burger-i>a').click(function(){
 		if (i == 0){ 
@@ -29,6 +30,9 @@ jQuery('.responsive-menu-box').append('<div class="newiconcontainer"><img src="d
 
 //Start scroll functions
 jQuery(document).ready(function( $ ) {
+	
+$('.home .master-holder-bg-holder').remove();
+$('.home .mk-main-wrapper-holder').remove();
 // add bouncy arrow
 	$('body').append('<div class="arrow jump animatedscroll iteration"></div>');
 	 $('.header-logo a').append('<img src="http://superiorcloudsolutions.com/broadleafresults/wp-content/uploads/2018/01/logo-scroll.svg" class="widthzero " />');
@@ -72,27 +76,120 @@ new ScrollMagic.Scene({triggerElement: "#theme-page"})
 .setClassToggle(".dark-logo","hidden")
 .addTo(controller);
 	
-$('.swap-dark3').attr('id','swap-dark3');
-$('.swap-dark2').attr('id','swap-dark2');
-var hgt2 = document.getElementById("swap-dark3").scrollHeight;
-var hgt3 = document.getElementById("swap-dark2").scrollHeight;
-var hgtsum = hgt2 + hgt3;
+//$('.swap-dark3').attr('id','swap-dark3');
+//$('.swap-dark2').attr('id','swap-dark2');
+//var hgt2 = document.getElementById("swap-dark3").scrollHeight;
+//var hgt3 = document.getElementById("swap-dark2").scrollHeight;
+//var hgtsum = hgt2 + hgt3;
 var controller2 = new ScrollMagic.Controller();
 
 // create a scene
-new ScrollMagic.Scene({triggerElement: "#swap-dark3",triggerHook: 'onLeave', duration: hgt2})
+	/*
+new ScrollMagic.Scene({triggerElement: "#swap-dark3",triggerHook: 'onLeave', duration: "%100"})
 .setClassToggle(".newiconcontainer","darkicons")
 .addTo(controller2);	
-new ScrollMagic.Scene({triggerElement: "#swap-dark3",triggerHook: 'onLeave', duration: hgt2})
+new ScrollMagic.Scene({triggerElement: "#swap-dark3",triggerHook: 'onLeave', duration: "%100"})
 .setClassToggle(".responsive-menu-button","darkiconsbg")
 .addTo(controller2);	
 	
-new ScrollMagic.Scene({triggerElement: "#swap-dark2",triggerHook: 'onLeave', duration: hgt3})
+new ScrollMagic.Scene({triggerElement: "#swap-dark2",triggerHook: 'onLeave', duration: "%100"})
 .setClassToggle(".newiconcontainer","darkicons")
 .addTo(controller2);	
-new ScrollMagic.Scene({triggerElement: "#swap-dark2",triggerHook: 'onLeave', duration: hgt3})
+new ScrollMagic.Scene({triggerElement: "#swap-dark2",triggerHook: 'onLeave', duration: "100%"})
 .setClassToggle(".responsive-menu-button","darkiconsbg")
 .addTo(controller2);	
+	*/
+	
+var containercontroller = new ScrollMagic.Controller();
+	
+
+	new ScrollMagic.Scene({
+		triggerElement:"#wipe1",
+		triggerHook:"onLeave"
+	})
+	.setPin("#wipe1")
+	.addIndicators()
+	.addTo(containercontroller);
+	
+	/** WIPE #2 **/
+	var blackbars = 'url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAgCAMAAABXc8oyAAABvFBMVEUAAAAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAi64aDAAAAlHRSTlMAAQIDBAUGBwgJCgsMDg8QERITFBUWFxkbHB0eHyEiIyQlJicoKissLS4wMTM0NTc4OTo7PT5AQkNERkdISUpMTU5PUFFSU1RVVldYWVpbXF1eX2BhYmNkZWdoaWtsbW5vcXN0dXZ3eHl6fH1+gIGCg4SFhoeIiYqLjI2Oj5CRkpOUlZaXmJmam5ydnp+goaKjpKWmR6Vu6gAAAsJJREFUeNp10+dWE2EUheE9TGghISC9I7333qWJFJESaTFAEJCOgJHeWyCEJHPDfud8zMLI8gqeH+/e0Aoxdh4SejGKQi0TM4eq8fYTKn3JcOwqkY/tqH+Ow+oaYrGIRF81eu9N6r4dGVoxhq/Cgk+tyNNyMHliCL8ZRKk/DXNIwNKWEv3UgiZPjLKxjARvLTofzEHOOaT6yzB4E244nkK2BhSReKBG3PWxuLCjWEj0xGJNiJ56tD9alB0H1AMbiyOXoSFnVuRr2Zg6FuIAyvypmHMq5odO1HoT0PwUrWySWIMuF4tp/lIWTyeRo+XBehocdjUM3PWiypdEYpS7DQ1CXF9F3DOJkcquA8m+CvTfGlUI8XwcBSQeGYwspmB+j8U6bzxWNpQYTyNaQaJJdc4KsQRD12HBQszVcjFB4hBK/OmwO1WTCyw2SjHeW4cOEueR4i8n0XA0jSxuAkwL8bYf5SRSjA4WV9cRK8Q2d5SyTU2qkE4ixZhgcVKI1ySmYZbEbtR4uQk2Vlj88GBW9kgsw8ANiSJGAcbFCi5HuAkC87PYwOLPBSQJsfcugpvgK+VnkfKzGGR2dbG4vClW0IwWagKz8kvmH9Dz58N6xmKxlgEbrYCa4E3+BRGjEn0kziBTK8KIbEKD4/wkyvzLFKOJxa0lXkG3yyQHx/mFSPlZ/Lavmu5JTMTiNjfBM4uUn0WR/5DEQoxeCHFMHCSLm4Dyk/ia300iH6RHrOC3XTbBS/7PMr8QXT2oJlEcxN2KRjoINYGeX6X8JOqXfC8v2Y8KbgKsyPytlD/gkumBl5T5WeT8JL5c8od+SUUcBCzK/Becn0T9ko7XS4LE75SfRP2SX+Ql8+QluQn+yi/E/17yBHJwev6P+iUtL5dc0y8Jmd8m85P4zyVT9Uu+o/wkcv7XS5bql8yRl4TtTX6+JIkBl/wDAw4qMufy8M8AAAAASUVORK5CYII=) repeat,';
+	
+	var bgoriginal = $('#wipe2').css("background-image");
+	var bgnew = blackbars + bgoriginal;
+	
+	$('#wipe2').css("cssText", "background:" + bgnew + "center / cover !important") ;
+	new ScrollMagic.Scene({
+		triggerElement:"#wipe2",
+		triggerHook:"onLeave",
+		duration:"120%"
+	})
+	.setPin("#wipe2")
+	.addIndicators()
+	.addTo(containercontroller);
+	
+	var orangeTween = TweenMax.to(".orangePanel",2,{className: "+=tweendisplay"});
+	new ScrollMagic.Scene({
+		triggerElement:"#wipe2",
+		triggerHook:"onLeave",
+		duration:200,
+		offset:100
+	})
+	.setTween(orangeTween)
+	.addIndicators()
+	.addTo(containercontroller);
+	/*
+	
+	use a pseudo selector to animate the dark background
+	
+	https://codepen.io/jamiejefferson/pen/ibHAt
+	div#wipe2:before {
+    position: absolute;
+    width: 100%;
+    height: calc(100% + 90px);
+    background: rgba(19,28,78,0.6);
+    top: 0px;
+}
+	*/
+	/** WIPE 3 **/
+	
+	new ScrollMagic.Scene({
+		triggerElement:"#wipe3",
+		triggerHook:"onLeave"
+	})
+	.setPin("#wipe3")
+	.addIndicators()
+	.addTo(containercontroller);
+	
+	new ScrollMagic.Scene({
+		triggerElement:"#wipe4",
+		triggerHook:"onLeave"
+	})
+	.setPin("#wipe4")
+	.addIndicators()
+	.addTo(containercontroller);
+	
+	new ScrollMagic.Scene({
+		triggerElement:"#wipe5",
+		triggerHook:"onLeave",
+		
+	})
+	.setPin("#wipe5")
+	.addIndicators()
+	.addTo(containercontroller);
+	
+	new ScrollMagic.Scene({
+		triggerElement:"#wipe6",
+		triggerHook:"onLeave"
+	})
+	.setPin("#wipe6")
+	.addIndicators()
+	.addTo(containercontroller);
+	
+	new ScrollMagic.Scene({
+		triggerElement:"#wipe7",
+		triggerHook:"onLeave",
+	
+	})
 	
 	
 })
