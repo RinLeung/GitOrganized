@@ -121,24 +121,55 @@ var containercontroller = new ScrollMagic.Controller();
 	new ScrollMagic.Scene({
 		triggerElement:"#wipe2",
 		triggerHook:"onLeave",
-		duration:"120%"
+		duration:"110%"
 	})
 	.setPin("#wipe2")
 	.addIndicators()
 	.addTo(containercontroller);
+	
+	new ScrollMagic.Scene({
+		triggerElement: "#wipe2",
+		triggerHook:"onLeave",
+	})
+.setClassToggle(".animated","fadeIn")
+.addTo(containercontroller);
 	
 	var orangeTween = TweenMax.to(".orangePanel",2,{className: "+=tweendisplay"});
 	new ScrollMagic.Scene({
 		triggerElement:"#wipe2",
 		triggerHook:"onLeave",
 		duration:200,
-		offset:100
+		offset:"70%"
 	})
 	.setTween(orangeTween)
-	.addIndicators()
+	.addIndicators({name:"orangetween"})
 	.addTo(containercontroller);
 	/*
+	var bgdarkswipe = TweenMax.to(".passivebg",5,{className: "+=activebg"});
+	new ScrollMagic.Scene({
+		triggerElement:"#wipe2",
+		triggerHook:"onLeave",
+		duration:300,
+		offset:125
+	})
+	.setTween(bgdarkswipe)
+	.addIndicators()
+	.addTo(containercontroller);
+	*/
+	var bgdarkswipe = CSSRulePlugin.getRule("#wipe2:before");
+	var bgds = TweenMax.to(bgdarkswipe, 1, {cssRule: { top: '0%' }},{autoAlpha:0,rotation:0.001, x:500,  ease:Linear.easeNone});
 	
+	new ScrollMagic.Scene({
+		triggerElement:"#wipe2",
+		triggerHook:"onLeave",
+		duration:25,
+		offset:"60%"
+	})
+	.setTween(bgds)
+	.addIndicators()
+	.addTo(containercontroller);
+	
+	/*
 	use a pseudo selector to animate the dark background
 	
 	https://codepen.io/jamiejefferson/pen/ibHAt
