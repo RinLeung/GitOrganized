@@ -2,6 +2,7 @@ jQuery('.menu-homepage-scroll-container a').addClass('js-smooth-scroll2').attr('
 jQuery('.section:after').trigger('inview').addClass('animateme');
 jQuery('.burger-i>a').addClass('no-click').removeAttr('href');
 jQuery('.static>a').addClass('no-click').removeAttr('href');
+
 /*
 |--------------------------------------------------------------------------
 | CUSTOM TOGGLE FOR THE MEGA MENU
@@ -39,6 +40,13 @@ jQuery('.responsive-menu-box').append('<div class="newiconcontainer"><img src="d
 */
 
 jQuery(document).ready(function( $ ) {
+// calculate wipe heights for some mobile browsers to prevent bg re-scaling on scroll b/c address bar moving
+	function calcVH() {
+  var vH = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+  $(".heightfullscene").css("cssText", "height:" + vH + "px;");
+}
+calcVH();
+window.addEventListener('onorientationchange', calcVH, true);
 // trim superflous visual composer code	
 $('.home .master-holder-bg-holder').remove();
 $('.home .mk-main-wrapper-holder').remove();
@@ -135,7 +143,7 @@ var containercontroller = new ScrollMagic.Controller();
 		triggerHook:"onLeave"
 	})
 	.setPin("#wipe1")
-	.addIndicators()
+	
 	.addTo(containercontroller);
 	
 /*
@@ -153,10 +161,9 @@ var containercontroller = new ScrollMagic.Controller();
 	new ScrollMagic.Scene({
 		triggerElement:"#wipe2",
 		triggerHook:"onLeave",
-		duration:"110%"
+		duration:"100%"
 	})
 	.setPin("#wipe2")
-	.addIndicators()
 	.addTo(containercontroller);
 	
 	new ScrollMagic.Scene({
@@ -171,10 +178,9 @@ var containercontroller = new ScrollMagic.Controller();
 		triggerElement:"#wipe2",
 		triggerHook:"onLeave",
 		duration:200,
-		offset:"70%"
+		offset:225
 	})
 	.setTween(orangeTween)
-	.addIndicators({name:"orangetween"})
 	.addTo(containercontroller);
 	
 	var bgdarkswipe = CSSRulePlugin.getRule("#wipe2:before");
@@ -184,10 +190,10 @@ var containercontroller = new ScrollMagic.Controller();
 		triggerElement:"#wipe2",
 		triggerHook:"onLeave",
 		duration:25,
-		offset:"60%"
+		offset:200
 	})
 	.setTween(bgds)
-	.addIndicators()
+	
 	.addTo(containercontroller);
 	
 /*
@@ -201,7 +207,7 @@ var containercontroller = new ScrollMagic.Controller();
 		triggerHook:"onLeave"
 	})
 	.setPin("#wipe3")
-	.addIndicators()
+	
 	.addTo(containercontroller);
 	
 /*
@@ -220,7 +226,7 @@ var containercontroller = new ScrollMagic.Controller();
 		duration:"110%"
 	})
 	.setPin("#wipe4")
-	.addIndicators()
+	
 	.addTo(containercontroller);
 	
 	new ScrollMagic.Scene({
@@ -235,10 +241,9 @@ var containercontroller = new ScrollMagic.Controller();
 		triggerElement:"#wipe4",
 		triggerHook:"onLeave",
 		duration:200,
-		offset:"70%"
+		offset:225
 	})
 	.setTween(orangeTween2)
-	.addIndicators({name:"orangetween2"})
 	.addTo(containercontroller);
 	
 	var bgdarkswipe2 = CSSRulePlugin.getRule("#wipe4:before");
@@ -248,10 +253,10 @@ var containercontroller = new ScrollMagic.Controller();
 		triggerElement:"#wipe4",
 		triggerHook:"onLeave",
 		duration:25,
-		offset:"60%"
+		offset:200
 	})
 	.setTween(bgds2)
-	.addIndicators()
+	
 	.addTo(containercontroller);
 	
 /*
@@ -262,11 +267,11 @@ var containercontroller = new ScrollMagic.Controller();
 	new ScrollMagic.Scene({
 		triggerElement:"#wipe6",
 		triggerHook:"onLeave",
-		duration:100
+		duration:200
 		
 	})
 	.setPin("#wipe6")
-	.addIndicators()
+	
 	.addTo(containercontroller);
 /*
 |--------------------------------------------------------------------------
@@ -278,7 +283,7 @@ var containercontroller = new ScrollMagic.Controller();
 		triggerHook:"onLeave"
 	})
 	.setPin("#wipe6")
-	.addIndicators()
+	
 	.addTo(containercontroller);
 	
 	new ScrollMagic.Scene({
@@ -292,10 +297,13 @@ var containercontroller = new ScrollMagic.Controller();
 | BEGINNING OF SECTION WIPE NAVIGATION
 |--------------------------------------------------------------------------
 */
-$('body').append('<div id="aninav"><ul><li id="wipelink1" class="reglink animated"><a href="#wipe1"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=" alt=""/></a></li><li id="wipelink2" class="reglink animated"><a href="#wipe2"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=" alt=""/></a></li><li id="wipelink3" class="reglink animated"><a href="#wipe3"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=" alt=""/></a></li><li id="wipelink4" class="reglink animated"><a href="#wipe4"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=" alt=""/></a></li><li id="wipelink5" class="reglink animated"><a href="#wipe6"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=" alt=""/></a></li><li class="nextlink"><a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=" alt=""/></a></li></ul></div>');
+$('body').append('<div id="aninav" class="animated"><ul><li id="wipelink1" class="reglink animated"><a href="#wipe1"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=" alt=""/></a></li><li id="wipelink2" class="reglink animated"><a href="#wipe2"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=" alt=""/></a></li><li id="wipelink3" class="reglink animated"><a href="#wipe3"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=" alt=""/></a></li><li id="wipelink4" class="reglink animated"><a href="#wipe4"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=" alt=""/></a></li><li id="wipelink5" class="reglink animated"><a href="#wipe6"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=" alt=""/></a></li><li class="nextlink"><a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=" alt=""/></a></li></ul></div>');
 
 new ScrollMagic.Scene({triggerElement:"#top-of-page",triggerHook:"onLeave",duration:"100%"})
 	.setClassToggle("#aninav","hidden")
+	.addTo(containercontroller);
+	new ScrollMagic.Scene({triggerElement:"#top-of-page",triggerHook:"onLeave",duration:"100%"})
+	.setClassToggle("#aninav","fadeIn")
 	.addTo(containercontroller);
 new ScrollMagic.Scene({triggerElement:"#wipe2",triggerHook:"onLeave",duration:"100%"})
 	.setClassToggle("#wipelink2","active")
