@@ -41,11 +41,23 @@ wp_register_script('op-bm-gsap', plugin_dir_url( __FILE__ ) . 'js/gsap.js','','1
 wp_enqueue_script('op-bm-gsap');
 }
 
+function op_bm_add_cssrule() {
+	
+wp_register_script('op-bm-cssrule', plugin_dir_url( __FILE__ ) . 'js/CSSRulePlugin.js','','1.0', true);
+wp_enqueue_script('op-bm-cssrule');
+}
+
+function op_bm_add_scrollto() {
+	
+wp_register_script('op-bm-scrollto', plugin_dir_url( __FILE__ ) . 'js/ScrollToPlugin.js','','1.0', true);
+wp_enqueue_script('op-bm-scrollto');
+}
 
 
 	add_action( 'wp_enqueue_scripts', 'op_bm_scrollmagic' ); 
 	add_action( 'wp_enqueue_scripts', 'op_bm_scrollmagic_indicators' ); 
 	add_action( 'wp_enqueue_scripts', 'op_bm_gsap_tweenmax' ); 
     add_action( 'wp_enqueue_scripts', 'op_bm_add_gsap' );  
-
+    add_action( 'wp_enqueue_scripts', 'op_bm_add_cssrule' );
+    add_action( 'wp_enqueue_scripts', 'op_bm_add_scrollto' );
 ?>
