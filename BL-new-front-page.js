@@ -61,7 +61,8 @@ $('.home .master-holder-bg-holder').remove();
 $('.home .mk-main-wrapper-holder').remove();
 // add bouncy arrow
 	$('body').append('<div class="arrow jump animatedscroll iteration"></div>');
-	 $('.header-logo a').append('<img src="http://superiorcloudsolutions.com/broadleafresults/wp-content/uploads/2018/01/logo-scroll.svg" class="widthzero " />');
+// add scroll down logo to the list of logos
+	 $('.header-logo a').append('<img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTczLjEyOHB4IiBoZWlnaHQ9IjEyNi43NjlweCIgdmlld0JveD0iMSAyMjYuODQ2IDE3My4xMjggMTI2Ljc2OSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAxIDIyNi44NDYgMTczLjEyOCAxMjYuNzY5Ig0KCSB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwYXRoIGZpbGw9IiMxNDFCNEQiIGQ9Ik0xNTUuMjU2LDI5MC42NDFjNy4zODUtNC4zMDcsMTUuMTgtMTUuMTc5LDE1LjE4LTI5LjEyOGMwLTIwLjcxOC0xNS4xOC0zNC42NjctMzguMzU5LTM0LjY2N0g2Ni40MzZ2OS4yMzENCgkJYzQuNzE4LDYuMTU0LDkuNjQxLDEzLjUzOCwxMy41MzgsMjEuOTQ4YzAuODIxLDEuODQ3LDMuNDg3LDguNDExLDQuMzA4LDEwLjQ2MmMyLjY2Nyw3Ljc5NSwzLjg5NywxNS4zODQsMy44OTcsMjIuNzY5DQoJCWMwLDE3LjQzNy03Ljc5NSwzMS4xOC0yMS43NDQsMzguOTc1djIzLjM4NWg2NS44NDZjMjcuNjkyLDAsNDEuODQ2LTE0LjU2Myw0MS44NDYtMzUuNDg3DQoJCUMxNzMuOTIzLDMwMC40ODcsMTY1LjcxOCwyOTIuNDg3LDE1NS4yNTYsMjkwLjY0MXogTTEyNi41MzksMzI4LjM4NUg5Ny40MXYtMjcuNjkybDAsMHYtMjEuMzMzbDAsMHYtMjcuMjgyaDI4LjMwOA0KCQljOCwwLDE0LjE1NCw1LjEyOCwxNC4xNTQsMTMuMTI4YzAsOC40MS02LjE1NCwxNC4xNTQtMTUuMzg0LDE0LjE1NEgxMDUuODJ2MjEuMzMzaDIxLjEyOGM4LjgyLDAsMTQuOTc0LDUuMzMzLDE0Ljk3NCwxMy41MzgNCgkJQzE0Mi4xMjgsMzIzLjA1MiwxMzYuNTksMzI4LjM4NSwxMjYuNTM5LDMyOC4zODV6Ii8+DQoJPGc+DQoJCTxnPg0KCQkJPGc+DQoJCQkJPHBhdGggZmlsbD0iIzE0MUI0RCIgZD0iTTIuMjMxLDI5MS4yNTZjMCwzMy42NDIsMzMuMjMsMzUuMDc3LDMzLjIzLDM1LjA3N3YtMjQuODJMNS43MTgsMjcxLjc2OQ0KCQkJCQlDMy42NjcsMjc3LjkyMywyLjIzMSwyODQuNDg3LDIuMjMxLDI5MS4yNTZ6Ii8+DQoJCQkJPHBhdGggZmlsbD0iIzAwOUY0RCIgZD0iTTM1LjQ2MSwyMjcuMDUxYzAsMC0xNi4yMDUsMTQuOTc0LTI2LjA1MSwzNS40ODdsMjYuMDUxLDI2LjA1MVYyMjcuMDUxeiIvPg0KCQkJCTxwYXRoIGZpbGw9IiMwMDlGNEQiIGQ9Ik00NC42OTIsMzAxLjUxM3YyNC42MTVjMCwwLDMzLjIzLTEuNDM2LDMzLjIzLTM1LjA3N2MwLTYuNzY5LTEuMjMtMTMuMTI4LTMuNDg3LTE5LjQ4N0w0NC42OTIsMzAxLjUxM3oNCgkJCQkJIi8+DQoJCQkJPHBhdGggZmlsbD0iIzAwOUY0RCIgZD0iTTQ0LjY5MiwyMjcuMDUxdjYxLjUzOWwyNi4wNTEtMjYuMDUxQzYwLjg5NywyNDIuMDI1LDQ0LjY5MiwyMjcuMDUxLDQ0LjY5MiwyMjcuMDUxeiIvPg0KCQkJPC9nPg0KCQkJPHBhdGggZmlsbD0iIzAwOUY0RCIgZD0iTTQ0LjY5MiwzMjYuMzMzdjI3LjI4MmgtOS4yMzF2LTI3LjI4MmMwLDAsMS44NDYsMC4yMDUsNC41MTMsMC4yMDUNCgkJCQlDNDIuNjQxLDMyNi41MzgsNDQuNjkyLDMyNi4zMzMsNDQuNjkyLDMyNi4zMzN6Ii8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==" class="widthzero" />');
 	
 /*
 |--------------------------------------------------------------------------
@@ -213,11 +214,24 @@ var containercontroller = new ScrollMagic.Controller();
 	
 	new ScrollMagic.Scene({
 		triggerElement:"#wipe3",
-		triggerHook:"onLeave"
+		triggerHook:"onLeave",
+		duration:100
 	})
 	.setPin("#wipe3")
 	
 	.addTo(containercontroller);
+	/*
+
+|--------------------------------------------------------------------------
+| BEGINNING OF WIPE #3 SLIDER MOD
+|--------------------------------------------------------------------------
+*/
+  $('.mk-tab-slider-nav a:nth-child(1)').html('1');
+	$('.mk-tab-slider-nav a:nth-child(2)').html('2');
+	$('.mk-tab-slider-nav a:nth-child(3)').html('3');
+	$('.mk-tab-slider-nav a:nth-child(4)').html('4');
+	$('.mk-tab-slider-nav a:nth-child(5)').html('5');
+	$('.mk-tab-slider-nav a:nth-child(6)').html('6');
 	
 /*
 |--------------------------------------------------------------------------
@@ -309,6 +323,11 @@ var containercontroller = new ScrollMagic.Controller();
 */
 $('body').append('<div id="aninav" class="animated"><ul><li id="wipelink1" class="reglink animated"><a href="#wipe1"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=" alt=""/></a></li><li id="wipelink2" class="reglink animated"><a href="#wipe2"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=" alt=""/></a></li><li id="wipelink3" class="reglink animated"><a href="#wipe3"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=" alt=""/></a></li><li id="wipelink4" class="reglink animated"><a href="#wipe4"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=" alt=""/></a></li><li id="wipelink5" class="reglink animated"><a href="#wipe6"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=" alt=""/></a></li><li class="nextlink"><a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=" alt=""/></a></li></ul></div>');
 
+		function nextlink (){
+	  console.log('nextlink fired');
+		var link = $('.reglink.active').next().children().attr('href');
+		$('.nextlink').children().attr('href',link);
+	};
 new ScrollMagic.Scene({triggerElement:"#top-of-page",triggerHook:"onLeave",duration:"100%"})
 	.setClassToggle("#aninav","hidden")
 	.addTo(containercontroller);
@@ -317,18 +336,21 @@ new ScrollMagic.Scene({triggerElement:"#top-of-page",triggerHook:"onLeave",durat
 	.addTo(containercontroller);
 new ScrollMagic.Scene({triggerElement:"#wipe2",triggerHook:"onLeave",duration:"100%"})
 	.setClassToggle("#wipelink2","active")
+	.on('update',nextlink)
 	.addTo(containercontroller);
 new ScrollMagic.Scene({triggerElement:"#wipe2",triggerHook:"onLeave",duration:"100%"})
 	.setClassToggle("#wipelink2","fadeIn")
 	.addTo(containercontroller);
 new ScrollMagic.Scene({triggerElement:"#wipe3",triggerHook:"onLeave",duration:"100%"})
 	.setClassToggle("#wipelink3","active")
+	.on('update',nextlink)
 	.addTo(containercontroller);
 	new ScrollMagic.Scene({triggerElement:"#wipe3",triggerHook:"onLeave",duration:"100%"})
 	.setClassToggle("#wipelink3","fadeIn")
 	.addTo(containercontroller);
 new ScrollMagic.Scene({triggerElement:"#wipe4",triggerHook:"onLeave",duration:"100%"})
 	.setClassToggle("#wipelink4","active")
+	.on('update',nextlink)
 	.addTo(containercontroller);
 	new ScrollMagic.Scene({triggerElement:"#wipe4",triggerHook:"onLeave",duration:"100%"})
 	.setClassToggle("#wipelink4","fadeIn")
@@ -340,7 +362,12 @@ new ScrollMagic.Scene({triggerElement:"#wipe6",triggerHook:"onLeave",duration:"1
 	.setClassToggle("#wipelink5","fadeIn")
 	.addTo(containercontroller);
 
-	
+// add 'next' arrow funcionality
+
+	$('.reglink').click(function(){
+	var link = $(this).next().children().attr('href');
+		$('.nextlink').children().attr('href',link);
+	});
 	
 // change behaviour of controller to animate scroll instead of jump
 	containercontroller.scrollTo(function (newposition) {

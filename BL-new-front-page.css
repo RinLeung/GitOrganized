@@ -10,6 +10,7 @@
 
 /* font sizes */
 .tfour{font-size:24px !important;}
+.bold{font-weight:bold;}
 /* end font sizes */
 
 .mk-text-block p a:link {text-decoration:underline;}
@@ -329,6 +330,25 @@ background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZ
 .home .mk-button--dimension-outline.skin-dark, .mk-button--dimension-savvy.skin-dark {
     border-color: #131c4e !important;
     color: #131c4e !important;}
+.home .mk-tab-slider-nav{
+	text-align:left;
+}
+.home .mk-slider-content-inside {
+	vertical-align: top;
+}
+@media(max-width:767px){
+	.home .mk-tab-slider-item.skin-dark .mk-slider-title{
+	font-size: 16px !important;
+		line-height: 20px;
+	}
+	.mk-tab-slider-nav{margin-bottom:0px}
+	#wipe3 .mk-grid:nth-child(1){margin-top:-70px}
+	#wipe3 {overflow:hidden;}
+}
+@media(min-width:768px){
+.mk-slider-content{padding:0px; padding-right:70px}
+}
+
 /*
 |--------------------------------------------------------------------------
 | RESPONSIVE ADDITIONS
@@ -338,7 +358,8 @@ background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZ
 #wipe1{margin-top:-90px;}
 .heightfullscene{padding-top:180px; }
 	.heightfullscene .wpb_column{max-width:66%}
-	#wipe6.heightfullscene .wpb_column{max-width:100%}
+	#wipe6.heightfullscene .wpb_column, #wipe3.heightfullscene .wpb_column{max-width:100%}
+	#wipe3.heightfullscene {padding-top:90px;}
 }
 @media  (max-width: 767px){
 .home #theme-page {margin-top:-90px; padding-left:20px; padding-right:20px;}
